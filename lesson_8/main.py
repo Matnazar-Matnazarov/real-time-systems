@@ -66,3 +66,32 @@ async def websocket_metrics(websocket: WebSocket):
             await asyncio.sleep(1)
     except WebSocketDisconnect:
         pass
+
+
+if __name__ == "__main__":
+    import uvicorn
+    
+    print("=" * 60)
+    print("🚀 Real-Time System Metrics Server")
+    print("=" * 60)
+    print("📍 Server: http://localhost:8000")
+    print("📊 Dashboard: http://localhost:8000")
+    print("🔌 WebSocket: ws://localhost:8000/ws/metrics")
+    print("💚 Health Check: http://localhost:8000/health")
+    print("📖 API Docs: http://localhost:8000/docs")
+    print("=" * 60)
+    print("💡 Real vaqt rejimida sistema metrikalarini ko'rsatadi:")
+    print("   • CPU foydalanish (umumiy va per-core)")
+    print("   • RAM foydalanish")
+    print("   • Network I/O")
+    print("   • System load average")
+    print("=" * 60)
+    print()
+    
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=8000,
+        reload=True,
+        log_level="info"
+    )

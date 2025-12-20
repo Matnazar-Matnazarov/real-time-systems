@@ -14,4 +14,4 @@ if __name__ == "__main__":
     print("⏳ Celery bilan avtomatik vazifa ishlayapti... Ctrl + C bilan to‘xtat.")
     while True:
         my_job.delay()  # Celery orqali backgroundda ishga yuboradi
-        time.sleep(10)  # Har 10 soniyada ish bajaradi
+        time.sleep(5)  # Har 5 soniyada ish bajaradi
